@@ -1,11 +1,9 @@
 <div class="wrapper">
   <div class="screen">
-    <div>
-      0
-    </div>
+    {{newVal ? newVal : result}}
   </div>
   <div class="button-box">
-    <button>
+    <button (click)="clear()">
       C
     </button>
     <button>
@@ -17,43 +15,43 @@
     <button>
       /
     </button>
-    <button>
+    <button (click)="numberFunc('7')">
       7
     </button>
-    <button>
+    <button (click)="numberFunc('8')">
       8
     </button>
-    <button>
+    <button (click)="numberFunc('9')">
       9
     </button>
     <button>
       X
     </button>
-    <button>
+    <button (click)="numberFunc('4')">
       4
     </button>
-    <button>
+    <button (click)="numberFunc('5')">
       5
     </button>
-    <button>
+    <button (click)="numberFunc('6')">
       6
     </button>
     <button>
       -
     </button>
-    <button>
+    <button (click)="numberFunc('1')">
       1
     </button>
-    <button>
+    <button (click)="numberFunc('2')">
       2
     </button>
-    <button>
+    <button (click)="numberFunc('3')">
       3
     </button>
     <button>
       +
     </button>
-    <button>
+    <button (click)="numberFunc('0')">
       0
     </button>
     <button>

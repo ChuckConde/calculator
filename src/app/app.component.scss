@@ -19,10 +19,7 @@
         font-weight: bold;
         box-sizing: border-box;
         font-size: 70px;
-        div {
-            display: block;
-            white-space: nowrap;
-        }
+        overflow: hidden;
     }
     .button-box {
         width: 100%;
