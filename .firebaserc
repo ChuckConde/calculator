@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "calculator-77581": {
+      "hosting": {
+        "calculator": [
+          "calculator-77581"
+        ]
+      }
+    }
+  }
+}
