@@ -12,7 +12,7 @@
     <button>
       %
     </button>
-    <button>
+    <button (click)="arithmeticOperation('divide')">
       /
     </button>
     <button (click)="numberFunc('7')">
@@ -24,7 +24,7 @@
     <button (click)="numberFunc('9')">
       9
     </button>
-    <button>
+    <button (click)="arithmeticOperation('multiply')">
       X
     </button>
     <button (click)="numberFunc('4')">
@@ -36,7 +36,7 @@
     <button (click)="numberFunc('6')">
       6
     </button>
-    <button>
+    <button (click)="arithmeticOperation('minus')">
       -
     </button>
     <button (click)="numberFunc('1')">
@@ -48,7 +48,7 @@
     <button (click)="numberFunc('3')">
       3
     </button>
-    <button>
+    <button (click)="arithmeticOperation('sum')">
       +
     </button>
     <button (click)="numberFunc('0')">
@@ -57,7 +57,7 @@
     <button>
       .
     </button>
-    <button class="equals">
+    <button class="equals" (click)="equals()">
       =
     </button>
     
