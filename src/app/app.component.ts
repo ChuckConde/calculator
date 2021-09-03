@@ -16,6 +16,9 @@ export class AppComponent {
   public clear() {
     this.newVal = '';
     this.result = 0;
+    this.storedResult = '0';
+    this.storedFunc = '';
+    this.mathApplied = false;
   }
   public numberFunc(num: any) {
     if (this.newVal) {
