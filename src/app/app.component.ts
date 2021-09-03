@@ -40,10 +40,15 @@ export class AppComponent {
       }
     }
   }
-  public arithmeticOperation(t: string) {
-    this.mathApplied = true;
-    this.storedResult = this.newVal;
-    this.storedFunc = t;
+  public addingDecimal() {
+    let noPreviousPoint = true;
+    if (this.newVal) {
+      if(!this.newVal.includes('.')) {
+        this.newVal += '.';
+      }
+    } else {
+      this.newVal = '0.'
+    }
   }
   public changeSymbol() {
     if(this.newVal) {
@@ -57,6 +62,11 @@ export class AppComponent {
         this.result = this.result * -1;
       }
     }
+  }
+  public arithmeticOperation(t: string) {
+    this.mathApplied = true;
+    this.storedResult = this.newVal;
+    this.storedFunc = t;
   }
   public equals() {
     switch (this.storedFunc) {
@@ -87,5 +97,6 @@ export class AppComponent {
         this.storedResult = '';
         break;
     }
+    this.storedFunc = '';
   }
 }
