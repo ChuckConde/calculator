@@ -12,6 +12,7 @@ export class AppComponent {
   storedResult = '0';
   storedFunc = '';
   mathApplied = false;
+  multiOperation = false;
 
   public clear() {
     this.newVal = '';
@@ -19,6 +20,7 @@ export class AppComponent {
     this.storedResult = '0';
     this.storedFunc = '';
     this.mathApplied = false;
+    this.multiOperation = false;
   }
   public numberFunc(num: any) {
     if (this.newVal) {
@@ -65,10 +67,20 @@ export class AppComponent {
   }
   public arithmeticOperation(t: string) {
     this.mathApplied = true;
-    this.storedResult = this.newVal;
-    this.storedFunc = t;
+    if(!this.multiOperation) {
+      this.storedResult = this.newVal;
+    }
+    if (!this.storedFunc) {
+      this.storedFunc = t;
+    } else {
+      this.equals();
+      this.storedResult = this.result.toString();
+      this.storedFunc = t;
+      this.multiOperation = true;
+    }
   }
   public equals() {
+    console.log('equals');
     switch (this.storedFunc) {
       case 'sum':
         this.result = parseFloat(this.storedResult) + parseFloat(this.newVal) ;
@@ -98,5 +110,7 @@ export class AppComponent {
         break;
     }
     this.storedFunc = '';
+    this.mathApplied = false;
+    this.multiOperation = false;
   }
 }
