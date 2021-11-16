@@ -1,4 +1,4 @@
-# Calculator
+# Calculator 1 hour challenge
 
 Simple Calculator made in an afternoon with no guide
 
